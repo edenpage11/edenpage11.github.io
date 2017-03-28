@@ -1,0 +1,93 @@
+
+<html>
+<head>
+<title> JavaScript Practice </title>
+<script>
+  function start(){
+  	var age=13;
+  	var name="Eden Barlow";
+  	alert(name + " is " + age);
+
+  }
+
+  function math(){
+  	var math = 133*5324-535/2+123;
+  	alert(math);
+  }
+
+  function question(){
+  	var q=prompt("What is my favorite color?");
+  	if(q=="blue" || "Blue"){
+  		alert("You guessed it!");
+  	}else{
+  		alert("Not quite");
+  	}
+  }
+
+  var pass = 1;
+
+  function toggle(){
+    var twitch = document.getElementById("rotate");
+    if(pass == 1){
+      twitch.innerHTML = "You didn't see anything...";
+      pass=2;
+    }else if (pass == 2){
+      twitch.innerHTML = "<img src='https://simplycoding.org/files/sclogo.png' />";
+      pass = 3;
+    } else {
+      twitch.innerHTML = "This text may change, even into an picture";
+      pass = 1;
+    }
+ }
+ function count(){
+  var count = 1; 
+  while(count < 10) { 
+  alert(count); 
+  count = count + 2; 
+}
+}
+function numbers(){
+  for(var i=0; i<11; i+=2){ 
+    alert(i); 
+  }
+}
+
+var games=["soccer", "basketball", "softball", "volleyball"]
+
+var dog={color:"brown", breed:"Chesapeake Bay Retriever", size: "big", friendliness:"very much"}
+function obj(){
+  var ask = prompt("What do you want to know about my dog? (color, breed, size or friendliness?):");
+  alert("My dog's " + ask + " is " + dog[ask]);
+
+}
+
+function morph(){
+  var box = document.getElementById("box");
+  box.style.backgroundColor = "black";
+  box.style.border = "7px ridge yellow";
+  box.innerHTML = "Did you just see that!";
+}
+ </script>
+  <style>
+   #box{
+    color: orange;
+    background-color: purple;
+    height: 25px;
+    width: 240px;
+   }
+  </style>
+</head>
+<body>
+  A game I like is <span><script> document.writeln(games[2]);</script> </span>
+  <div id="rotate">This text may change, even into an picture</div>
+	<input type="button" onclick="start()" value="Click Me">
+	<input type="button" onclick="math()" value="Mathematical equations!!">
+	<input type="button" onclick="question()" value="Favorite Color">
+  <input type="button" onclick="toggle()" value="Change Button">
+  <input type="button" onclick="count()" value="While Loop">
+  <input type="button" onclick="numbers()" value="For Loop">
+  <input type="button" onclick="obj()" value="Wanna know my dog?">
+  <div id="box">You're about to see some change</div>
+  <input type="button" onclick="morph()" value="Change the Box">
+</body>
+</html>
